@@ -1,15 +1,13 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
 
 
 const server = express()
-dotenv.config()
-
 server.use(express.json())
 server.use(cors())
 
-const port = process.env.POST
+const port = process.env.PORT
 
 const users = [
     {
